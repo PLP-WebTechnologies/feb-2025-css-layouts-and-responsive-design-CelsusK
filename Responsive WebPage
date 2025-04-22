@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiragu's Responsive Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the main content */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* --- Flexbox Styles --- */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centers items horizontally */
+            align-items: stretch; /* Makes items stretch to equal height */
+            gap: 20px;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Start at 100% width for small screens */
+            box-sizing: border-box;
+            border: 1px solid #b2ebf2;
+            display: flex; /* Enable flexbox for inner content alignment if needed */
+            flex-direction: column; /* Stack content within the flex item */
+        }
+
+        .flex-item h2 {
+            color: #00869e;
+            margin-bottom: 10px;
+        }
+
+        .flex-item p {
+            margin-bottom: 0; /* Remove default bottom margin for consistent spacing */
+        }
+
+        /* --- Grid Styles --- */
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f0f4c3;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d4e157;
+        }
+
+        .grid-item h2 {
+            color: #7cb342;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            margin-bottom: 0;
+        }
+
+        /* --- Media Queries --- */
+        /* Medium screens and up (768px) */
+        @media (min-width: 768px) {
+            .flex-item {
+                width: 48%; /* Two columns on medium screens */
+            }
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
+
+        /* Large screens and up (1200px) */
+        @media (min-width: 1200px) {
+            .flex-item {
+                width: 31%; /* Adjust for three columns with spacing, using calc */
+            }
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="main-content">
+        <h1>Kiragu's Responsive Webpage</h1>
+        <section class="flex-container">
+            <div class="flex-item">
+                <h2>Manchester City</h2>
+                <p>Manchester City, known for their attacking style and tactical innovation under Pep Guardiola, have been a dominant force in the Premier League, consistently challenging for the title.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Arsenal</h2>
+                <p>Arsenal, with a rich history, are known for their attractive football. They are a strong contender in the Premier League, showcasing a blend of youth and experience.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Liverpool</h2>
+                <p>Liverpool, with their passionate fanbase and high-energy play, are always a threat.  They have a proven track record of success in both domestic and European competitions.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Manchester United</h2>
+                <p>Manchester United, one of the most successful clubs in English football history, are known for their resilience and attacking prowess. They continue to be a major player in the Premier League.</p>
+            </div>
+        </section>
+
+        <section class="grid-container">
+            <div class="grid-item">
+                <h2>Premier League</h2>
+                <p>The Premier League is the top tier of English football, known for its competitiveness, fast-paced action, and global appeal.  It features many world-class players and historic clubs.</p>
+            </div>
+            <div class="grid-item">
+                <h2>La Liga</h2>
+                <p>La Liga is the top professional football division in Spain.  It is renowned for its technically gifted players, elegant style of play, and historic rivalries, attracting a worldwide audience.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Serie A</h2>
+                <p>Serie A is the top football league in Italy.  It is known for its tactical sophistication, strong defensive organization, and passionate fan base.  Many legendary players have played in Serie A.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Bundesliga</h2>
+                <p>The Bundesliga is the top tier of German football. It is famous for its high-scoring matches, well-organized clubs, and vibrant stadium atmosphere. German clubs also have a strong record in European competitions.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
